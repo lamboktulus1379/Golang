@@ -37,14 +37,14 @@ func (c *client) insertLightningConnectorIntoComputer(com computer) {
 	com.insertIntoLightningPort()
 }
 
-func main() {
-	client := client{}
-	mac := &mac{}
-	client.insertLightningConnectorIntoComputer(mac)
+// func main() {
+// 	client := client{}
+// 	mac := &mac{}
+// 	client.insertLightningConnectorIntoComputer(mac)
 
-	windows := &windows{}
+// 	windows := &windows{}
 
-	windowsAdapter := &windowsAdapter{windowsMachine: windows}
+// 	windowsAdapter := &windowsAdapter{windowsMachine: windows}
 
-	client.insertLightningConnectorIntoComputer(windowsAdapter)
-}
+// 	client.insertLightningConnectorIntoComputer(windowsAdapter)
+// }

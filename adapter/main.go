@@ -1,5 +1,7 @@
 package main
 
+import "fmt"
+
 type RoundHole struct {
 	Radius int
 }
@@ -32,31 +34,31 @@ type SquarePegAdapter struct {
 	*RoundPeg
 }
 
-// func main() {
-// 	fmt.Println("Adapter Design Pattern")
+func main() {
+	fmt.Println("Adapter Design Pattern")
 
-// 	hole := RoundHole{5}
-// 	rPeg := RoundPeg{5}
+	hole := RoundHole{5}
+	rPeg := RoundPeg{5}
 
-// 	fit := hole.IsFits(rPeg)
-// 	fmt.Println(fit)
+	fit := hole.IsFits(rPeg)
+	fmt.Println(fit)
 
-// 	smallSquarePeg := SquarePeg{5}
-// 	largeSquarePeg := SquarePeg{10}
+	smallSquarePeg := SquarePeg{5}
+	largeSquarePeg := SquarePeg{10}
 
-// 	// hole.IsFits(smallSquarePeg)
+	// hole.IsFits(smallSquarePeg)
 
-// 	smallSquarePegAdapter := SquarePegAdapter{
-// 		RoundPeg: &RoundPeg{
-// 			Radius: smallSquarePeg.GetWidth(),
-// 		},
-// 	}
-// 	largeSqurePegAdapter := SquarePegAdapter{
-// 		RoundPeg: &RoundPeg{
-// 			Radius: largeSquarePeg.GetWidth(),
-// 		},
-// 	}
+	smallSquarePegAdapter := SquarePegAdapter{
+		RoundPeg: &RoundPeg{
+			Radius: smallSquarePeg.GetWidth(),
+		},
+	}
+	largeSqurePegAdapter := SquarePegAdapter{
+		RoundPeg: &RoundPeg{
+			Radius: largeSquarePeg.GetWidth(),
+		},
+	}
 
-// 	fmt.Println(hole.IsFits(*smallSquarePegAdapter.RoundPeg))
-// 	fmt.Println(hole.IsFits(*largeSqurePegAdapter.RoundPeg))
-// }
+	fmt.Println(hole.IsFits(*smallSquarePegAdapter.RoundPeg))
+	fmt.Println(hole.IsFits(*largeSqurePegAdapter.RoundPeg))
+}

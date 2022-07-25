@@ -11,5 +11,5 @@ func Print[T any](s []T) {
 func main() {
 	fmt.Println("[INFO]")
 	Print([]string{"Hello, ", "playground\n"})
-	Print([]int{1,2,3})
+	Print([]int{1, 2, 3})
 }
