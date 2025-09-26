@@ -6,7 +6,7 @@ type Number interface {
 	int64 | float64
 }
 
-func main() {
+func main2() {
 	// Initialize a map for the integer values
 	ints := map[string]int64{
 		"first":  34,
