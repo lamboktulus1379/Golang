@@ -21,7 +21,7 @@ func producer(ctx context.Context, ch chan int) {
 
 func main() {
 	ch := make(chan int)
-	ctx, cancel := context.WithTimeout(context.Background(), 3*time.Second)
+	ctx, cancel := context.WithTimeout(context.Background(), 10*time.Second)
 	defer cancel()
 
 	go producer(ctx, ch)

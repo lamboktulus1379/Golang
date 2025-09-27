@@ -16,6 +16,13 @@ func WordCount(s string) map[string]int {
 	for i := 0; i < len(ss); i++ {
 		result[ss[i]] = result[ss[i]] + 1
 	}
+	value, ok := result["the"]
+	if ok {
+		fmt.Println("Value Exists:")
+		fmt.Println(value)
+	} else {
+		fmt.Println("Value does not exist")
+	}
 	return result
 }
 
